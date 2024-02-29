@@ -52,7 +52,6 @@ nav a:hover {
   box-shadow: -14px 16px 15px -3px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 10px;
-  margin-top: 20px;
 }
 
 .jumbotron {
@@ -70,36 +69,55 @@ nav {
   top: 0;
 }
 
+nav ul {
+  display: flex;
+  gap: 2rem;
+  padding-inline: 4rem;
+}
+
 nav li {
-  display: inline;
   list-style-type: none;
-  margin-right: 20px;
 }
 
 main {
-  padding: 50px;
-  overflow: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
 }
 
 .left-content {
-  width: 75%;
-  float: left;
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
 }
 
 .right-content {
-  width: 25%;
-  float: right;
-  padding-left: 20px;
+  flex: 1;
 }
 
 header {
   display: inline;
 }
 
-@media screen and (max-width: 1000px) {
-  .left-content,
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
   .right-content {
-    width: 100%;
-    padding: 0;
+    align-self: center;
+  }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  .right-content {
+    align-self: stretch;
   }
 }
