@@ -66,6 +66,8 @@ nav a:hover {
 nav {
   background-color: #00a2c6;
   padding: 15px;
+  position: sticky;
+  top: 0;
 }
 
 nav li {
@@ -88,4 +90,16 @@ main {
   width: 25%;
   float: right;
   padding-left: 20px;
+}
+
+header {
+  display: inline;
+}
+
+@media screen and (max-width: 1000px) {
+  .left-content,
+  .right-content {
+    width: 100%;
+    padding: 0;
+  }
 }
