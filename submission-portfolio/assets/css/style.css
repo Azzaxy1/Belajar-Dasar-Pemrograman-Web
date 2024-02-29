@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+:root {
+  --primary: #375878;
+  --secondary: #7dd3fc;
+  --txt-color: #6b7280;
+  --font-size: 1.05rem;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+}
+
+.nav-container {
+  width: 100%;
+  padding-block: 1rem;
+  margin-inline: auto;
+  box-shadow: -1px 6px 7px 1px rgba(102, 102, 101, 0.24);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav-container .logo a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.nav-container .logo a span {
+  color: var(--primary);
+}
+
+.nav-container .nav-list ul {
+  padding-left: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+.nav-container .nav-list li {
+  list-style-type: none;
+}
+
+.nav-container .nav-list li a {
+  padding: 0.5rem 1rem;
+
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #000;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-container .nav-list li:hover a {
+  color: var(--secondary);
+}
+
+/* Hero Section */
+article#hero {
+  margin: 3rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.hero-description {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.hero-description .hero-title {
+  font-size: 3rem;
+  color: var(--primary);
+}
+
+.hero-description p {
+  color: var(--txt-color);
+  font-weight: 400;
+  margin-block: 0.5rem;
+  font-size: var(--font-size);
+  line-height: 1.5rem;
+}
+
+.hero-description button {
+  border: var(--primary);
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.15s ease-in;
+}
+
+.hero-description button:hover {
+  border: 3px solid var();
+  background-color: transparent;
+
+  color: var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  header.nav-container {
+    flex-direction: column;
+  }
+
+  header.nav-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  /* Hero  */
+  article#hero {
+    flex-direction: column;
+  }
+
+  .hero-description .hero-title {
+    text-align: center;
+  }
+
+  .hero-description button {
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+}
