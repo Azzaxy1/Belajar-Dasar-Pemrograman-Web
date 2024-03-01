@@ -17,7 +17,6 @@
 
 body {
   font-family: "Figtree", sans-serif;
-  height: 1000vh;
 }
 
 /* Navbar */
@@ -108,23 +107,24 @@ article#hero {
   padding: 0.8rem 1rem;
   border-radius: 999px;
   background-color: var(--primary);
-  color: white;
   cursor: pointer;
   width: fit-content;
   transition: all 0.15s ease-in;
 }
 
 .hero-description button:hover {
-  border: 2px solid var(--primary);
-  background-color: transparent;
+  background-color: #1b3752;
+  transform: scale(1.1);
+}
 
-  color: var(--primary);
+.hero-description button a {
+  text-decoration: none;
+  color: white;
 }
 
 /* Project section */
 article#project {
-  /* min-height: 100vh; */
-  margin: 0 3rem;
+  margin: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -186,6 +186,89 @@ section.card-project .card-link {
   text-decoration-style: wavy;
 }
 
+/* Skill Section */
+article#skill {
+  background-color: #1f2937;
+  height: 100vh;
+}
+
+article#skill header {
+  padding: 1rem 5rem;
+  width: 70%;
+}
+
+article#skill .skill-title {
+  color: white;
+  font-size: 2.8rem;
+}
+
+article#skill header p {
+  font-size: var(--font-desktop);
+  color: var(--txt-color);
+  margin-block: 0.5rem;
+}
+
+#slider-container {
+  overflow: hidden;
+  height: auto;
+  overflow-x: auto;
+}
+
+#slider {
+  margin-top: 5rem;
+  display: flex;
+  width: fit-content; /* Lebar sesuai dengan konten (total lebar semua gambar) */
+  transition: transform 0.5s ease;
+}
+
+#slider img {
+  margin-right: 10px; /* Jarak antar gambar */
+  width: 10rem; /* Lebar gambar */
+  height: auto; /* Sesuaikan tinggi secara proporsional */
+}
+
+/* Aside */
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main aside .social-media ul {
+  padding: 0.6rem 0.4rem;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: auto;
+  background-color: var(--primary);
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+  color: var(--secondary);
+}
+
 /* Medium devices (768px dan di bawahnya)  */
 @media screen and (max-width: 768px) {
   /* Navbar */
@@ -235,5 +318,15 @@ section.card-project .card-link {
 
   article#project section.card-project img {
     width: 300px;
+  }
+
+  /* Skill section */
+  article#skill header {
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+
+  article#skill header .skill-title {
+    font-size: 1.9rem;
   }
 }

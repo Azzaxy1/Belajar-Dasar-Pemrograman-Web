@@ -14,6 +14,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/myphoto.png" type="image/x-icon">
+
+  <!-- Font Awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -39,7 +47,7 @@
         <p>I am a Bachelor of Informatics Engineering student at Banten Jaya University. <br>I have a strong interest in
           Web Development, especially Front End <br> Development using React Js. My skills include problem solving, <br>
           critical thinking, time work, time management, and a desire <br> to explore new knowledge.</p>
-        <button>Download CV</button>
+        <button><a href="assets/img/cv.pdf" download>Download CV</a></button>
       </div>
 
       <div class="hero-image">
@@ -88,10 +96,42 @@
     </article>
 
     <!-- Skill Section -->
-    <article id="skill"></article>
-  </main>
-  <footer></footer>
+    <article id="skill">
+      <header>
+        <h1 class="skill-title">🎯 Tech Stack</h1>
+        <p>I am someone who enjoys seeking challenges. Here are a few skills that I have developed and honed.</p>
+      </header>
+      <div id="slider-container">
+        <section id="slider">
+          <img src="assets/icons/html.svg" alt="html icons" width="100">
+          <img src="assets/icons/css.svg" alt="css icons" width="100">
+          <img src="assets/icons/javascript.svg" alt="javascript icons" width="100">
+          <img src="assets/icons/bootstrap.svg" alt="bootstrap icons" width="100">
+          <img src="assets/icons/tailwind.svg" alt="tailwind icons">
+          <img src="assets/icons/react.svg" alt="react icons">
+          <img src="assets/icons/redux.svg" alt="redux icons">
+        </section>
+      </div>
+    </article>
 
+    <!-- Aside -->
+    <aside>
+      <div class="social-media">
+        <ul>
+          <li><a href="#hero"><img src="assets/img/myphoto.png" alt="my photo" width="50"></a></li>
+          <li><a href="https://github.com/Azzaxy1" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/abdurrohmanazis/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.instagram.com/ar.azis_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+  <footer>
+    <p></p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
