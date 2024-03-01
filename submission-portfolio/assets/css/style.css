@@ -52,7 +52,6 @@ body {
 
   display: flex;
   justify-content: center;
-  gap: 2rem 1rem;
 }
 
 .nav-container .nav-list li {
@@ -267,6 +266,16 @@ main aside .social-media li a {
 
 main aside .social-media li a:hover {
   color: var(--secondary);
+}
+
+/* Footer */
+footer {
+  background-color: #1f2937;
+  text-align: center;
+  padding-block: 1.5rem;
+  color: white;
+  font-weight: 600;
+  border-top: 1px solid white;
 }
 
 /* Medium devices (768px dan di bawahnya)  */
