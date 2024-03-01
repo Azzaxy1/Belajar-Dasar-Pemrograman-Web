@@ -11,17 +11,21 @@
   --primary: #375878;
   --secondary: #7dd3fc;
   --txt-color: #6b7280;
-  --font-size: 1.05rem;
+  --font-desktop: 1.05rem;
+  --font-mobile: 1rem;
 }
 
 body {
   font-family: "Figtree", sans-serif;
+  height: 1000vh;
 }
 
+/* Navbar */
 .nav-container {
   width: 100%;
   padding-block: 1rem;
   margin-inline: auto;
+  background-color: white;
   box-shadow: -1px 6px 7px 1px rgba(102, 102, 101, 0.24);
 
   display: flex;
@@ -73,8 +77,8 @@ body {
 
 /* Hero Section */
 article#hero {
+  min-height: 100vh;
   margin: 3rem;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,14 +92,14 @@ article#hero {
 
 .hero-description .hero-title {
   font-size: 3rem;
-  color: var(--primary);
+  color: #357998;
 }
 
 .hero-description p {
   color: var(--txt-color);
   font-weight: 400;
   margin-block: 0.5rem;
-  font-size: var(--font-size);
+  font-size: var(--font-desktop);
   line-height: 1.5rem;
 }
 
@@ -111,30 +115,105 @@ article#hero {
 }
 
 .hero-description button:hover {
-  border: 3px solid var();
+  border: 2px solid var(--primary);
   background-color: transparent;
 
   color: var(--primary);
 }
 
+/* Project section */
+article#project {
+  /* min-height: 100vh; */
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+article#project header {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 30rem;
+}
+
+article#project header .project-title {
+  color: #357998;
+  font-size: 2.8rem;
+}
+
+article#project header p {
+  font-size: var(--font-desktop);
+  color: var(--txt-color);
+  margin-block: 0.5rem;
+}
+
+article#project .card-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+article#project section.card-project {
+  box-shadow: -14px 16px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+article#project section.card-project:hover {
+  transform: scale(1.1);
+}
+
+article#project section.card-project img {
+  border-bottom: 2px solid grey;
+}
+
+section.card-project .card-title {
+  color: var(--primary);
+}
+
+section.card-project .card-description {
+  font-size: var(--font-desktop);
+  font-weight: 400;
+  color: var(--txt-color);
+  padding: 0.3rem 0;
+}
+
+section.card-project .card-link {
+  color: var(--secondary);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+/* Medium devices (768px dan di bawahnya)  */
 @media screen and (max-width: 768px) {
   /* Navbar */
   header.nav-container {
     flex-direction: column;
   }
 
+  header.nav-container .logo a {
+    font-size: 1.8rem;
+  }
+
   header.nav-container .nav-list ul {
     flex-wrap: wrap;
     column-gap: 0.5rem;
   }
-
   /* Hero  */
   article#hero {
     flex-direction: column;
+    gap: 10px;
   }
 
   .hero-description .hero-title {
+    font-size: 2.1rem;
     text-align: center;
+  }
+
+  .hero-description p {
+    font-size: var(--font-mobile);
   }
 
   .hero-description button {
@@ -143,5 +222,18 @@ article#hero {
 
   .hero-image {
     order: -1;
+  }
+
+  .hero-image img {
+    width: 20rem;
+  }
+
+  /* Project section */
+  article#project header .project-title {
+    font-size: 1.9rem;
+  }
+
+  article#project section.card-project img {
+    width: 300px;
   }
 }
