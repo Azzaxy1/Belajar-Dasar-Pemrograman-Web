@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   /* border: 1px solid black; */
+  scroll-padding-top: 90px;
 }
 
 :root {
@@ -25,7 +26,7 @@ body {
   padding-block: 1rem;
   margin-inline: auto;
   background-color: white;
-  box-shadow: -1px 6px 7px 1px rgba(102, 102, 101, 0.24);
+  box-shadow: -1px 6px 7px 1px rgba(112, 112, 112, 0.24);
 
   display: flex;
   justify-content: space-around;
@@ -164,12 +165,17 @@ article#project section.card-project:hover {
   transform: scale(1.1);
 }
 
-article#project section.card-project img {
+article#project section.card-project > img {
   border-bottom: 2px solid grey;
 }
 
 section.card-project .card-title {
   color: var(--primary);
+}
+
+section.card-project .tech-stack {
+  display: flex;
+  gap: 1rem;
 }
 
 section.card-project .card-description {
@@ -188,7 +194,7 @@ section.card-project .card-link {
 /* Skill Section */
 article#skill {
   background-color: #1f2937;
-  height: 100vh;
+  height: 20rem;
 }
 
 article#skill header {
@@ -207,23 +213,22 @@ article#skill header p {
   margin-block: 0.5rem;
 }
 
-#slider-container {
+article#skill .slider-container {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  height: auto;
-  overflow-x: auto;
+  width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
 }
 
-#slider {
-  margin-top: 5rem;
+article#skill .slider-container .slider {
   display: flex;
-  width: fit-content; /* Lebar sesuai dengan konten (total lebar semua gambar) */
   transition: transform 0.5s ease;
 }
 
-#slider img {
-  margin-right: 10px; /* Jarak antar gambar */
-  width: 10rem; /* Lebar gambar */
-  height: auto; /* Sesuaikan tinggi secara proporsional */
+.slider-container .slider img {
+  margin-right: 10px;
 }
 
 /* Aside */
@@ -233,12 +238,12 @@ main aside {
   inset-inline-end: 0;
 }
 
-main aside .social-media {
+main aside .contact {
   height: 100%;
   display: flex;
 }
 
-main aside .social-media ul {
+main aside .contact ul {
   padding: 0.6rem 0.4rem;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -252,11 +257,11 @@ main aside .social-media ul {
   gap: 1rem;
 }
 
-main aside .social-media li {
+main aside .contact li {
   list-style-type: none;
 }
 
-main aside .social-media li a {
+main aside .contact li a {
   text-decoration: none;
   font-size: 1.5rem;
   color: white;
@@ -264,7 +269,7 @@ main aside .social-media li a {
   transition: all 0.1s ease-in-out;
 }
 
-main aside .social-media li a:hover {
+main aside .contact li a:hover {
   color: var(--secondary);
 }
 
@@ -325,11 +330,15 @@ footer {
     font-size: 1.9rem;
   }
 
-  article#project section.card-project img {
+  article#project section.card-project a img {
     width: 300px;
   }
 
   /* Skill section */
+  article#skill {
+    height: 18rem;
+  }
+
   article#skill header {
     padding: 1rem 2rem;
     width: 100%;
@@ -337,5 +346,22 @@ footer {
 
   article#skill header .skill-title {
     font-size: 1.9rem;
+  }
+
+  .slider-container .slider img {
+    width: 70px;
+  }
+
+  /* Aside */
+  main aside .contact ul {
+    padding: 0.5rem 0.3rem;
+    gap: 0.8rem;
+  }
+
+  main aside .contact li a {
+    font-size: 1.3rem;
+  }
+  main aside .contact li a .aside-image {
+    width: 40px;
   }
 }
