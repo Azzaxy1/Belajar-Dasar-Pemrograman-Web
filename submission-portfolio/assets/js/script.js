@@ -1,3 +1,11 @@
+// Hamburger Menu
+const menuIcon = document.getElementById("menu-icon");
+const menuList = document.getElementById("menu-list");
+
+menuIcon.addEventListener("click", () => {
+  menuList.classList.toggle("hidden");
+});
+
 // Slider Skill Icons
 let index = 0;
 const slides = document.querySelectorAll(".slider img");
